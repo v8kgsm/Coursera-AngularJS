@@ -2,7 +2,7 @@
 <html lang="en" ng-app="LunchCheck">
   <head>
     <title>Lunch Checker</title>
-    <h2>Note:Empty spaces and " " are not considered as items.</h2>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
@@ -11,7 +11,8 @@
   </head>
 <body>
    <div class="container" ng-controller="LunchCheckController">
-     <h1>Lunch Checker</h1>
+     <h1>Lunch Checker</h1><br>
+     <h4>Note:Empty spaces and " " are not considered as items.</h4>
          <div class="form-group">
              <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
