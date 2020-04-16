@@ -10,7 +10,12 @@
     <h1>My First Angular JS</h1>
     <div ng-controller="MyFirstController">
       {{name}}
+      document.write("<br>")
       {{sayHello()}}
+      document.write("<br>")
+      <input type="text" ng-model='name'>
+      document.write("<br>")
+      Inside my input is : {{name}}
     </div>
   </body>
 </html>
