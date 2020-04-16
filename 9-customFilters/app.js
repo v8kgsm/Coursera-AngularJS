@@ -11,12 +11,12 @@ function MsgController($scope,lovesFilter) {
   $scope.name = "Yaakov";
   $scope.stateOfBeing = "hungry";
   $scope.sayMessage = function () {
-    return msg = "Yaakov likes to eat healthy snacks at night!";
+    var  msg = "Yaakov likes to eat healthy snacks at night!";
     return msg;
   };
   //use of filters
   $scope.sayLovesMessage = function () {
-    return msg = "Yaakov likes to eat healthy snacks at night!";
+    var msg = "Yaakov likes to eat healthy snacks at night!";
     msg = lovesFilter(msg)
     return msg;
   };
