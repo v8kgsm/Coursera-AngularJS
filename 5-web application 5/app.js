@@ -1,4 +1,4 @@
-// first way 
+// first way
 //(function () {
 // 'use strict';
 //
@@ -11,7 +11,6 @@
 //     var upCase = $filter('uppercase');
 //     $scope.name = upCase($scope.name);
 //   };
-//
 //   console.log($injector.annotate(DIController));
 // }
 //
