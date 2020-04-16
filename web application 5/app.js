@@ -26,4 +26,5 @@
 // console.log(AnnonateMe);
 // console.log(AnnonateMe.toString());
 // })();
+//magnified code
 !function(){"use strict";function e(e,n){e.name="Yaakov",e.upper=function(){var o=n("uppercase");e.name=o(e.name)}}angular.module("DIApp",[]).controller("DIController",e),e.$inject=["$scope","$filter"]}();
