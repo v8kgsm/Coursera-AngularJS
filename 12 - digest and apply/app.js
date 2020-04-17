@@ -4,26 +4,33 @@
 angular.module('CounterApp', [])
 .controller('CounterController', CounterController);
 
-CounterController.$inject = ['$scope'];
-function CounterController($scope) {
+CounterController.$inject = ['$scope', '$timeout'];
+function CounterController($scope, $timeout) {
   $scope.counter = 0;
 
-  $scope.upCounter = function(){
-    setTimeout(function(){
-      $scope.$apply(function(){
-        $scope.counter++;
-        console.log("Counter Incremented!");
-      });
-    },2000);//2ms i.e. 2 seconds
+  $scope.upCounter = function () {
+    $timeout(function () {
+      $scope.counter++;
+      console.log("Counter incremented!");
+    }, 2000);
   };
 
-  //1
-  // $scope.upCounter = function(){
-  //   setTimeout(function(){
+  // $scope.upCounter = function () {
+  //   setTimeout(function () {
+  //     $scope.$apply(function () {
+  //       $scope.counter++;
+  //       console.log("Counter incremented!");
+  //     });
+  //   }, 2000);
+  // };
+
+  // $scope.upCounter = function () {
+  //   setTimeout(function () {
   //     $scope.counter++;
-  //     console.log("Counter Incremented!");
-  //     $scope.digest(); // notify about kicking off
-  //   },2000);//2ms i.e. 2 seconds
+  //     console.log("Counter incremented!");
+  //     $scope.$digest();
+  //   }, 2000);
   // };
 }
+
 })();
