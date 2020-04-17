@@ -1,8 +1,8 @@
 (function () {
 'use strict';
 
-angular.module('CounterApp', [])
-.controller('CounterController', CounterController);
+angular.module('BindingApp', [])
+.controller('BindingController', BindingController);
 
 CounterController.$inject = ['$scope', '$timeout'];
 function CounterController($scope, $timeout) {
