@@ -44,7 +44,7 @@ function ShoppingListService() {
     };
     items.push(item);
   };
-
+// to remove item from the list
   service.removeItem = function (itemIndex) {
     items.splice(itemIndex, 1);
   };
