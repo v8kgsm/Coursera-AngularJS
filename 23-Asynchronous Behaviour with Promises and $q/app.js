@@ -30,9 +30,12 @@ ShoppingListService.$inject = ['$q', 'WeightLossFilterService'];
 function ShoppingListService($q, WeightLossFilterService) {
   var service = this;
 
+// the steps 1 , 2, and 3 differ with respect to time taken for execution asynchronously
+
   // List of shopping items
   var items = [];
-
+// 1
+// threads for both conditions wait until the execution of first is done to process the other one in queue
   // service.addItem = function (name, quantity) {
   //   var promise = WeightLossFilterService.checkName(name);
   //
@@ -53,7 +56,8 @@ function ShoppingListService($q, WeightLossFilterService) {
   //   });
   // };
 
-
+//2
+// different way of initializing with same(1) way of thread async.
   // service.addItem = function (name, quantity) {
   //   var promise = WeightLossFilterService.checkName(name);
   //
@@ -73,7 +77,8 @@ function ShoppingListService($q, WeightLossFilterService) {
   //   });
   // };
 
-
+//3
+// the threads for both conditions works independently not wait for other one to complete.
   service.addItem = function (name, quantity) {
     var namePromise = WeightLossFilterService.checkName(name);
     var quantityPromise = WeightLossFilterService.checkQuantity(quantity);
@@ -90,6 +95,8 @@ function ShoppingListService($q, WeightLossFilterService) {
       console.log(errorResponse.message);
     });
   };
+
+// Functions
 
   service.removeItem = function (itemIndex) {
     items.splice(itemIndex, 1);
