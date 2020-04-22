@@ -12,7 +12,7 @@ function ShoppingListDirective() {
   var ddo = {
     templateUrl: 'shoppingList.html',
     scope: {
-      items: '<',
+      items: '<', //one way binding
       title: '@'
     },
     // controller: 'ShoppingListDirectiveController as list',
