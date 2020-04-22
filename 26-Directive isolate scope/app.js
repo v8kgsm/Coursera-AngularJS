@@ -116,4 +116,3 @@ function ShoppingListFactory() {
 }
 
 })();
-© 2020 GitHub, Inc.
