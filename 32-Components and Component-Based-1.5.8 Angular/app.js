@@ -42,7 +42,7 @@ $ctrl.$onInit = function () {
 $ctrl.$onChanges = function (changeObj) {
   console.log("Changes: ", changeObj);
 }
-
+// the 1.5.8 version used to check the $doCheck  lifecycle element
 $ctrl.$doCheck = function () {
   if ($ctrl.items.length !== totalItems) {
     console.log("# of items changed. Checking for Cookies!");
