@@ -15,6 +15,7 @@ Step 1 - Clone This Repository
 Open up the Command Prompt or cmd (on Windows) or Terminal app (if you on a Mac). Navigate (use cd some_dir) to a directory of your choice, preferably located in your home directory. and type following git command which will create a subdirectory in the directory you're in now called restaurant-server and download the repository code into that subdirectory.
 
 git clone https://github.com/jhu-ep-coursera/restaurant-server.git
+
 Step 2 - Sign Up With Heroku
 Now, that you have the repo, we need to deploy it somewhere on the internet. We will be using Heroku. Heroku is a cloud Platform-as-a-Service (PaaS) and it's free (they of course have paid plans, but we will be using the free plan).
 
@@ -48,6 +49,7 @@ Alternatively, type the name you would like Heroku to use (as your chosen subdom
 heroku create ychaikin-course5
 Creating ⬢ ychaikin-course5... done
 https://ychaikin-course5.herokuapp.com/ | https://git.heroku.com/ychaikin-course5.git
+
 Step 6 - Deploy The App Using Git
 When you created your application, Heroku created an empty remote git repository for you. You can verify that this is indeed so by typing the following git command:
 
